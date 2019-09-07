@@ -10,29 +10,29 @@ public class TodoService
         this._repository = repository;
     }
 
-    public async Task<int> Add(Todo todo)
+    public Task<int> Add(Todo todo)
     {
-        return await _repository.Add(todo).ConfigureAwait(false);
+        return _repository.Add(todo);
     }
 
-    public async Task<bool> Delete(int Id)
+    public Task<bool> Delete(int Id)
     {
-        return await _repository.Delete(Id).ConfigureAwait(false);
+        return _repository.Delete(Id);
     }
 
-    public async Task<List<Todo>> GetAll()
+    public Task<List<Todo>> GetAll()
     {
-       return await _repository.GetAll().ConfigureAwait(false);
+       return _repository.GetAll();
     }
 
-    public async Task<bool> MarkCompleted(int Id, bool IsCompleted)
+    public Task<bool> MarkCompleted(int Id, bool IsCompleted)
     {
-       return await _repository.MarkCompleted(Id, IsCompleted).ConfigureAwait(false);
+       return _repository.MarkCompleted(Id, IsCompleted);
     }
 
-    public async Task<bool> Update(int Id, Todo todo)
+    public Task<bool> Update(int Id, Todo todo)
     {
-        return await _repository.Update(Id, todo).ConfigureAwait(false);
+        return _repository.Update(Id, todo);
     }
 
 }
