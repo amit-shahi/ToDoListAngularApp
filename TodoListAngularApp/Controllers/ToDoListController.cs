@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using AutoMapper;
+using ToDo_List_App.Service;
+using ToDo_List_App.Model;
+using ToDo_List_App.ViewModel;
 
 namespace ToDo_List_App.Controllers
 {
@@ -13,6 +16,10 @@ namespace ToDo_List_App.Controllers
     {
         private readonly TodoService _todoService;
         private readonly IMapper _mapper;
+
+        public ToDoListController(TodoService todoService) {
+            this._todoService = todoService;
+        }
         public ToDoListController(TodoService todoService, IMapper mapper)
         {
             this._todoService = todoService;
@@ -41,6 +48,7 @@ namespace ToDo_List_App.Controllers
  
                 return Ok(await _todoService.Add(mappedViewModel).ConfigureAwait(false));
             }
+            
             return BadRequest();
         }
 

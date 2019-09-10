@@ -1,38 +1,42 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ToDo_List_App.Model;
 
-public class TodoService
+namespace ToDo_List_App.Service
 {
-    private readonly ITodoRepository _repository;
-
-    public TodoService(ITodoRepository repository)
+    public class TodoService
     {
-        this._repository = repository;
-    }
+        private readonly ITodoRepository _repository;
 
-    public Task<int> Add(Todo todo)
-    {
-        return _repository.Add(todo);
-    }
+        public TodoService(){}
+        public TodoService(ITodoRepository repository)
+        {
+            this._repository = repository;
+        }
 
-    public Task<bool> Delete(int Id)
-    {
-        return _repository.Delete(Id);
-    }
+        public Task<int> Add(Todo todo)
+        {
+            return _repository.Add(todo);
+        }
 
-    public Task<List<Todo>> GetAll()
-    {
-       return _repository.GetAll();
-    }
+        public Task<bool> Delete(int Id)
+        {
+            return _repository.Delete(Id);
+        }
 
-    public Task<bool> MarkCompleted(int Id, bool IsCompleted)
-    {
-       return _repository.MarkCompleted(Id, IsCompleted);
-    }
+        public Task<List<Todo>> GetAll()
+        {
+            return _repository.GetAll();
+        }
 
-    public Task<bool> Update(int Id, Todo todo)
-    {
-        return _repository.Update(Id, todo);
-    }
+        public Task<bool> MarkCompleted(int Id, bool IsCompleted)
+        {
+            return _repository.MarkCompleted(Id, IsCompleted);
+        }
 
+        public Task<bool> Update(int Id, Todo todo)
+        {
+            return _repository.Update(Id, todo);
+        }
+    }
 }
