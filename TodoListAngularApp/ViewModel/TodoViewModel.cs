@@ -6,7 +6,6 @@ namespace ToDo_List_App.ViewModel
     {
         public string WorkTodo { get; set; }
         public bool IsCompleted { get; set; }
-        public DateTime CreatedOn { get; set; }
     }
 
     public class TodoUpdateViewModel

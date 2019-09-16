@@ -34,19 +34,19 @@ namespace ToDo_List_App.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> AddTodo([FromBody] TodoAddViewModel todo)
+        public async Task<IActionResult> AddTodo(TodoAddViewModel todo) //[FromBody] 
         {
             if(todo != null)
             { 
                 // NOTE: Used AutoMapper for Object-to-Object mapping instead of old school viewModel 
-                // var vm = new Todo  
-                // {  
-                //     WorkTodo = todo.WorkTodo,
-                //     IsCompleted = todo.IsCompleted
-                // }; 
-                var mappedViewModel = _mapper.Map<Todo>(todo); 
- 
-                return Ok(await _todoService.Add(mappedViewModel).ConfigureAwait(false));
+                var mappedViewModel = new Todo  
+                {  
+                    WorkTodo = todo.WorkTodo,
+                    IsCompleted = todo.IsCompleted
+                }; 
+                //var mappedViewModel = _mapper.Map<Todo>(todo); 
+                int result = await _todoService.Add(mappedViewModel).ConfigureAwait(false);
+                return Ok(result);
             }
             
             return BadRequest();
@@ -69,7 +69,7 @@ namespace ToDo_List_App.Controllers
             if(Id != 0 && todo != null)
             { 
                 // NOTE: Used AutoMapper for Object-to-Object mapping instead of old school viewModel 
-                // var vm = new Todo  
+                // var mappedViewModel = new Todo  
                 // {  
                 //     WorkTodo = todo.WorkTodo,
                 //     IsCompleted = todo.IsCompleted

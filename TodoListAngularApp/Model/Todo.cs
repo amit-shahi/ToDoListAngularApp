@@ -9,6 +9,6 @@ namespace ToDo_List_App.Model
         public int Id { get; set; }
         public string WorkTodo { get; set; }
         public bool IsCompleted { get; set; }
-        public DateTime CreatedOn { get; set; }
+        public DateTime? CreatedOn { get; set; }
     }
 }
