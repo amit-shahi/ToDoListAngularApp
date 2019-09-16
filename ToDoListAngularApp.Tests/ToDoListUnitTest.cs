@@ -1,4 +1,3 @@
-// using NUnit.Framework;
 using ToDo_List_App.Service;
 using System.Threading.Tasks;
 using System;
@@ -12,7 +11,6 @@ using Xunit;
 
 namespace ToDoListAngularApp.Tests
 {
-    //[TestFixture]
     public class ToDoListControllerTest : IDisposable
     {
         private readonly TodoService _todoService;
@@ -32,13 +30,8 @@ namespace ToDoListAngularApp.Tests
             this._todoService = new TodoService();
 
         }
-
-        // [SetUp]
-        // public void Setup()
-        // {
-        // }
-
-        [Fact]
+ 
+        //[Fact]
         public async Task Add_New_Item_Should_Return_Integer_Value()
         {
 
@@ -68,7 +61,7 @@ namespace ToDoListAngularApp.Tests
             // SynchronizationContext.Current.Post(state => { }, null);
 
             // await Task.Yield();
-            Assert.Equal("3", "3");
+            
             //Assert.IsType<OkObjectResult>(result);
             //Assert.That(result, Is.InstanceOf<OkObjectResult>());
 
