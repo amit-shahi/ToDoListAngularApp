@@ -62,7 +62,8 @@ namespace ToDoListAngularApp.Tests
 
             // await Task.Yield();
             
-            //Assert.IsType<OkObjectResult>(result);
+            Assert.IsType<OkObjectResult>(result);
+            
             //Assert.That(result, Is.InstanceOf<OkObjectResult>());
 
 
