@@ -1,11 +1,11 @@
-using ToDo_List_App.Service;
+// using ToDo_List_App.Service;
 using System.Threading.Tasks;
 using System;
-using ToDo_List_App.Controllers;
+// using ToDo_List_App.Controllers;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using ToDo_List_App.ViewModel;
+// using ToDo_List_App.ViewModel;
 using System.Threading;
 using Xunit;
 
@@ -72,15 +72,15 @@ namespace ToDoListAngularApp.Tests
         // }
 
 
-        public void Initialize(TodoDbContext context)
-        {
-            // if (context.Todos.Any())
-            // {
-            //     return;
-            // }
+        // public void Initialize(TodoDbContext context)
+        // {
+        //     // if (context.Todos.Any())
+        //     // {
+        //     //     return;
+        //     // }
 
-            // Seed(context);
-        }
+        //     // Seed(context);
+        // }
 
         public void Dispose()
         {
