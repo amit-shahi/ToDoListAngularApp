@@ -2,6 +2,8 @@
 
 This is an awesome Todo App v1.0 created to share the fun and exciting feature of Angular & .NET Core together to build Single Page Application. The  project was created using following stack:
 
+[![Build Status](https://dev.azure.com/Amit-Shahi/ToDoListAngularApp/_apis/build/status/ToDoListAngularApp-ASP.NET%20Core-CI?branchName=master)](https://dev.azure.com/Amit-Shahi/ToDoListAngularApp/_build/latest?definitionId=4&branchName=master)
+
 [Demo ToDoList AngularApp with .Net core 2](https://netcoretodosapp.azurewebsites.net/)
 
 ## Frontend Technologies
