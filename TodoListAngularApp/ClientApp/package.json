@@ -26,6 +26,7 @@
     "bootstrap": "^4.4.1",
     "core-js": "^2.6.11",
     "font-awesome": "^4.7.0",
+    "https-proxy-agent": "^5.0.0",
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.5.5",
     "zone.js": "^0.8.29"
@@ -33,7 +34,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.26",
     "@angular/cli": "^9.1.1",
-    "@angular/compiler-cli": "^9.1.1",
+    "@angular/compiler-cli": "^9.1.2",
     "@angular/language-service": "^6.1.10",
     "@angular/platform-server": "6.0.0",
     "@types/jasmine": "^2.8.16",
@@ -42,7 +43,7 @@
     "codelyzer": "~4.2.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^5.0.1",
+    "karma": "^5.0.2",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~1.4.2",
     "karma-jasmine": "~1.1.1",
